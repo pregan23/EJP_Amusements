@@ -9,6 +9,8 @@
 
 [Trello](https://trello.com/b/mbNYhFNh/theme-park)
 
+[ERD](https://app.diagrams.net/?sketch=1#G1za9An_pi-eQSMQUkMuqYVYNRQlWbBnDR)
+
 
 
 ---
