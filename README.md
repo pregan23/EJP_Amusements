@@ -2,7 +2,7 @@
 
 ## Date 3/23/2022
 
-### By: Eric Lantz, Jenna Leopold, Patrick Regan
+### By: Eric Lantz, Jenna Leopold, and Patrick Regan
 
 
 [Github](https://github.com/pregan23/EJP_Amusements)
