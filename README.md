@@ -1,4 +1,4 @@
-# EJP_Amusements
+# EJP Amusements
 
 ## Date 3/23/2022
 
