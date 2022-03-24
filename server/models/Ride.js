@@ -7,7 +7,7 @@ const Ride = new Schema(
     image: { type: String, required: true },
     minHeight: { type: String, required: true },
     // isOpen: { type: Boolean, required: true},
-    parkId: { type: String, required: true }
+    
   },
   { timestamps: true }
 )
