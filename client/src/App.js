@@ -2,7 +2,8 @@ import './App.css';
 import {useEffect, useState} from 'react'
 import CreateRideForm from './components/CreateRideForm'
 import axios from 'axios'
-import rideCard from 
+import Rides from './components/Rides'
+import RideCard from './components/RideCard'
 
 function App() {
 
