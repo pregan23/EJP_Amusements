@@ -4,7 +4,7 @@ const Park = new Schema(
     {
         name: { type: String, required: true },
         location: { type: String, required: true },
-        rides: { type: Schema.Types.ObjectId, ref: ride },
+        rides: [{ type: Schema.Types.ObjectId, ref: 'Ride' }],
         
     },
 
