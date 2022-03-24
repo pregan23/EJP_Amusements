@@ -5,14 +5,14 @@ const Park = require('../models/Park')
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
-    const parks =
+    const park =
         { name: 'EJP Amusements',
-          location: "Antartica"
-          
-      },
+          location: "Antartica",
+          rides: []
+      }
 
-    await Park.insertOne(parks)
-    console.log("Created some plants!")
+    await Park.insertOne(park)
+    console.log("Created an amusement park")
 }
 const run = async () => {
     await main()
