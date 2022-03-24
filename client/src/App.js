@@ -15,19 +15,19 @@ function App() {
   const [imagePath, setImagePath] = useState('')
 
   const handleNameChange = (event) => {
-    setName(event.targer.value)
+    setName(event.target.value)
   }
 
   const handleDescriptionChange = (event) => {
-    setDescription(event.targer.value)
+    setDescription(event.target.value)
   }
 
   const handleMinHeightChange = (event) => {
-    setMinHeight(event.targer.value)
+    setMinHeight(event.target.value)
   }
 
   const handleImagePathChange = (event) => {
-    setImagePath(event.targer.value)
+    setImagePath(event.target.value)
   }
 
   const createRide = async (event) => {
@@ -36,7 +36,7 @@ function App() {
       name: name,
       description: description,
       minHeight: minHeight,
-      imagePath: imagePath
+      image: imagePath
     })
     .then(function (response) {
       console.log(response);
@@ -45,6 +45,8 @@ function App() {
       console.log(error);
     });
     // setSearchResults(response.data.results)
+
+    // setRides
     setName('')
     setDescription('')
     setMinHeight('')
@@ -54,7 +56,19 @@ function App() {
 
   return (
     <div className="App">
-      <CreateRideForm />
+      <h1>EJP Amusements</h1>
+      <h3>Create Amusement Park Ride</h3>
+      <CreateRideForm
+        name={name} 
+        description={description} 
+        minHeight={minHeight} 
+        imagePath={imagePath}
+        handleNameChange={handleNameChange}
+        handleDescriptionChange={handleDescriptionChange}
+        handleImagePathChange={handleImagePathChange}
+        createRide={createRide}
+      
+      />
     </div>
   );
 }
