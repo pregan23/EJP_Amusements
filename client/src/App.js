@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import CreateRideForm from './components/CreateRideForm'
+import Rides from './components/Rides'
 import axios from 'axios'
 import './App.css'
 
@@ -72,6 +73,7 @@ function App() {
         handleImagePathChange={handleImagePathChange}
         createRide={createRide}
       />
+      <Rides rides={rides} />
     </div>
   )
 }
