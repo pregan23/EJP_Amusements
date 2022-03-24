@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: lavender;
 }
 
 .App-logo {
@@ -13,26 +14,67 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main {
+  padding: 2em 0;
+}
+
+main {
+  padding: 2em 0;
+}
+
+input {
+  width: 500px;
+  margin: 0 1em;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+form {
+  max-width: 500px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+button {
+  padding: 0.2em 1em;
+  border: 0;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ride-card {
+
+  width: 400px;
+  height: 550px;
+  border: rgb(129, 129, 129) outset 7px;
+  border-radius: 20px;
+  margin: 30px;
+  padding: 10px;
+}
+
+.ride-card img {
+  width: 90%;
+  height: 200px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.rides-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  justify-items: center;
+
 }
