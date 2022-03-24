@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import CreateRideForm from './components/CreateRideForm'
 import axios from 'axios'
 import './App.css'
@@ -8,7 +8,16 @@ function App() {
   const [description, setDescription] = useState('')
   const [minHeight, setMinHeight] = useState('')
   const [imagePath, setImagePath] = useState('')
-  // const [rides, setRides] = useState([])
+  const [rides, setRides] = useState([])
+
+  const fetchRides = async () => {
+    const response = await axios.get('http://localhost:3001/rides')
+    setRides(response.data.rides)
+  }
+
+  useEffect(() => {
+    fetchRides()
+  }, [])
 
   const handleNameChange = (event) => {
     setName(event.target.value)
@@ -37,12 +46,11 @@ function App() {
       })
       .then(function (response) {
         console.log(response)
-        // invoke function to fetch the rides
+        fetchRides()
       })
       .catch(function (error) {
         console.log(error)
       })
-    // setRides([...rides, ride])
     setName('')
     setDescription('')
     setMinHeight('')
