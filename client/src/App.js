@@ -1,4 +1,5 @@
 import CreateRideForm from './components/CreateRideForm'
+import Rides from './components/CreateRideForm'
 import './App.css';
 import { useEffect, useState } from 'react'
 import axios from 'axios'
@@ -84,6 +85,8 @@ function App() {
         createRide={createRide}
       
       />
+
+      <Rides rides={rides} />
     </div>
   );
 }
