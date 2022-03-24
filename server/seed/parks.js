@@ -1,16 +1,18 @@
 const db = require('../db')
-const Park = require('../models/Park')
+const { Park } = require('../models')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
-  const park = {
-    name: 'EJP Amusements',
-    location: 'Antarctica',
-    rides: []
-  }
+  const parks = [
+    {
+      name: 'EJP Amusements',
+      location: 'Antarctica',
+      rides: []
+    }
+  ]
 
-  await Park.insertOne(park)
+  await Park.insertMany(parks)
   console.log('Created an amusement park!')
 }
 const run = async () => {
