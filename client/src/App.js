@@ -1,19 +1,28 @@
 import './App.css';
-import React from 'react'
-import {useState} from 'react'
-import CreateRideForm from './components/'
+import {useEffect, useState} from 'react'
+import CreateRideForm from './components/CreateRideForm'
 import axios from 'axios'
+import rideCard from 
 
 function App() {
 
   const [name, setName] = useState('')
-  const [description, setDescrition] = useState('')
+  const [description, setDescription] = useState('')
   const [minHeight, setMinHeight] = useState('')
   const [imagePath, setImagePath] = useState('')
-  const [rideName, setRideName] = useState('')
+  const [rides, setRides] = useState([])
+
+  const fetchRides = async () => {
+    const response = await axios.get('http://localhost:3001/rides')
+    setRides(response.data.rides)
+  }
+
+  useEffect(() => {
+    fetchRides()
+  }, [])
 
   const handleNameChange = (event) => {
- setName(event.target.value)
+    setName(event.target.value)
   }
   const handleDescriptionChange = (event) => {
     setDescription(event.target.value)
@@ -28,29 +37,44 @@ function App() {
 
   const createRide = async (event) => {
     event.preventDefault()
-    const response = await axios.post('/http://localhost:3001/rides', {
+    await axios
+    .post('http://localhost:3001/rides', {
       name: name,
       description: description,
       minHeight: minHeight,
-      imagePath: imagePath
+      image: imagePath
     })
-    setName(''),
-    setDescription(''),
-    setMinHeight(''),
+    .then(function (response) {
+      console.log(response)
+      fetchRides()
+    })
+    .catch(function (error) {
+      console.log(error)
+    })
+    setName('')
+    setDescription('')
+    setMinHeight('')
     setImagePath('')
   }
-  .then(function (response) {
-    console.log(response);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
 
   return (
     <div className="App">
-      <CreateRideForm />
+      <h1>EJP Amusements</h1>
+      <h2>Create a Ride</h2>
+      <CreateRideForm 
+      name={name}
+      description={description}
+      minHeight={minHeight}
+      imagePath={imagePath}
+      handleNameChange={handleNameChange}
+      handleDescriptionChange={handleDescriptionChange}
+      handleMinHeightChange={handleMinHeightChange}
+      handleImagePathChange={handleImagePathChange}
+      createRide={createRide}
+      />
+      <Rides rides={rides}/>
     </div>
-  );
+  )
 }
 
 export default App;
