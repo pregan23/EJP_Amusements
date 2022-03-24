@@ -1,5 +1,5 @@
 import React from 'react'
-import RideCard from './components/RideCard'
+import RideCard from './RideCard'
 
 const Rides = ({ rides }) => {
   return (
