@@ -49,6 +49,13 @@
 
 ### **_Credits_**
 
+### **Background Image**: [Clip Art Panda](http://images.clipartpanda.com/theme-clipart-ThemePark.svg)
+
+### **Spinning Teacups**: [Amusmentrides.org](https://amusementrides.org/wp-content/uploads/2016/06/All-You-Need-To-Know-About-Taking-Your-Children-On-The-Tea-Cup-Ride.jpg)
+
+### **Pirate Ship**: [Hussrides](https://www.hussrides.com/sites/default/files/gallery/pirate-ship-g9.jpg)
+
+### **Dragon Coaster**: [Amazon Web Services](https://s3.amazonaws.com/project-images-2018/_AUTOx1084_fit_center-center/Dragon_Roller_Coaster_02.jpg)
 
 
 ### **Knowledge and Knowhow**: [General Assembly](https://generalassemb.ly/), [Github](https://github.com/), [W3 Schools](https://www.w3schools.com/), [MDN](https://developer.mozilla.org/en-US/)
