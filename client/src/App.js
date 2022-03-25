@@ -46,7 +46,6 @@ function App() {
         image: imagePath
       })
       .then(function (response) {
-        console.log(response)
         fetchRides()
       })
       .catch(function (error) {
@@ -58,9 +57,17 @@ function App() {
     setImagePath('')
   }
 
+  const deleteRide = async (id) => {
+    await axios
+      .delete(`http://localhost:3001/rides/${id}`)
+      .then(function (response) {
+        fetchRides()
+      })
+  }
+
   return (
     <div className="App">
-      <h1 className = "main-title">EJP Amusements</h1>
+      <h1 className="main-title">EJP Amusements</h1>
       <CreateRideForm
         name={name}
         description={description}
@@ -72,7 +79,7 @@ function App() {
         handleImagePathChange={handleImagePathChange}
         createRide={createRide}
       />
-      <Rides rides={rides} />
+      <Rides rides={rides} deleteRide={deleteRide} />
     </div>
   )
 }
