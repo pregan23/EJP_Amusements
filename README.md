@@ -46,9 +46,10 @@
 
 ### **_Future Updates_**
 
-- [ ] Add new rides
+- [x] Add new rides
 - [ ] Live updating wait times
-- [x] Calendar for special events
+- [] Calendar for special events
+
 <!-- - [x] ~~Strikethrough~~ Items Also -->
 
 ### **_Credits_**
