@@ -34,8 +34,20 @@ const deleteRide = async (req, res) => {
   }
 }
 
+const updateRide = async (req, res) => {
+  try {
+    const ride = await Ride.findByIdAndUpdate(req.params.id, req.body, {
+      new: true
+    })
+    res.json(ride)
+  } catch (err) {
+    res.send(err.message)
+  }
+}
+
 module.exports = {
   createRide,
   getAllRides,
-  deleteRide
+  deleteRide,
+  updateRide
 }

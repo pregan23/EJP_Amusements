@@ -10,6 +10,7 @@ function App() {
   const [minHeight, setMinHeight] = useState('')
   const [imagePath, setImagePath] = useState('')
   const [rides, setRides] = useState([])
+  const [waitTime, setWaitTime] = useState('N/A')
 
   const fetchRides = async () => {
     const response = await axios.get('http://localhost:3001/rides')
@@ -34,6 +35,10 @@ function App() {
 
   const handleImagePathChange = (event) => {
     setImagePath(event.target.value)
+  }
+
+  const handleWaitTimeChange = (event) => {
+    setWaitTime(event.target.value)
   }
 
   const createRide = async (event) => {
@@ -65,6 +70,10 @@ function App() {
       })
   }
 
+  const updateWait = async (id) => {
+    await axios.put(`http://localhost:3001/rides/${id}`, {waitTime: waitTime})    
+  }
+
   return (
     <div className="App">
       <h1 className="main-title">EJP Amusements</h1>
@@ -79,7 +88,7 @@ function App() {
         handleImagePathChange={handleImagePathChange}
         createRide={createRide}
       />
-      <Rides rides={rides} deleteRide={deleteRide} />
+      <Rides rides={rides} deleteRide={deleteRide} handleWaitTimeChange={handleWaitTimeChange} updateWait={updateWait} />
     </div>
   )
 }
