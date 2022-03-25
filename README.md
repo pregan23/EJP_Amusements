@@ -48,7 +48,7 @@
 
 - [x] Add new rides
 - [ ] Live updating wait times
-- [] Calendar for special events
+- [ ] Calendar for special events
 
 <!-- - [x] ~~Strikethrough~~ Items Also -->
 
