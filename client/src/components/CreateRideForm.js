@@ -3,7 +3,7 @@ import React from 'react'
 const CreateRideForm = (props) => {
   return (
     <div className = "form-wrapper">
-      <h2>Create Amusement Park Ride</h2>
+      <h1>Create Amusement Park Ride</h1>
       <br/>
       <form onSubmit={props.createRide}>
         <div>
