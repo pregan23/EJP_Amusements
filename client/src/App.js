@@ -17,6 +17,12 @@ function App() {
     setRides(response.data.rides)
   }
 
+  const fetchWait = async (id) => {
+    console.log('INSIDE THE FETCH')
+    const response = await axios.get(`http://localhost:3001/rides/${id}`)
+    console.log(response.data.rides)
+  }
+
   useEffect(() => {
     fetchRides()
   }, [])
@@ -71,7 +77,7 @@ function App() {
   }
 
   const updateWait = async (id) => {
-    await axios.put(`http://localhost:3001/rides/${id}`, {waitTime: waitTime})    
+    await axios.put(`http://localhost:3001/rides/${id}`, { waitTime: waitTime })
   }
 
   return (
@@ -88,7 +94,14 @@ function App() {
         handleImagePathChange={handleImagePathChange}
         createRide={createRide}
       />
-      <Rides rides={rides} deleteRide={deleteRide} handleWaitTimeChange={handleWaitTimeChange} updateWait={updateWait} />
+      <Rides
+        rides={rides}
+        deleteRide={deleteRide}
+        handleWaitTimeChange={handleWaitTimeChange}
+        updateWait={updateWait}
+        waitTime={waitTime}
+        fetchWait={fetchWait}
+      />
     </div>
   )
 }

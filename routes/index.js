@@ -10,6 +10,8 @@ router.get('/rides', controllers.getAllRides)
 
 router.delete('/rides/:id', controllers.deleteRide)
 
+router.get('/rides/:id', controllers.getRide)
+
 router.put('/rides/:id', controllers.updateRide)
 
 module.exports = router
