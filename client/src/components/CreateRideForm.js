@@ -9,7 +9,6 @@ const CreateRideForm = (props) => {
         <div>
           <label><b>Name:</b></label>
           <input
-            className = "short-input"
             type="text"
             value={props.name}
             placeholder="Enter ride name..."
@@ -19,7 +18,6 @@ const CreateRideForm = (props) => {
         <div>
           <label><b>Description:</b></label>
           <input
-            className = "long-input"
             type="text"
             value={props.description}
             placeholder="Enter description..."
@@ -29,7 +27,6 @@ const CreateRideForm = (props) => {
         <div>
           <label><b>Min Height:</b></label>
           <input
-            className = "short-input"
             type="text"
             value={props.minHeight}
             placeholder="Enter min height..."
@@ -39,7 +36,6 @@ const CreateRideForm = (props) => {
         <div>
           <label><b>Image:</b></label>
           <input
-           className = "medium-input"
             type="text"
             value={props.imagePath}
             placeholder="Enter ride image path..."
