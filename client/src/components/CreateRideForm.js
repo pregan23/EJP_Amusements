@@ -3,9 +3,11 @@ import React from 'react'
 const CreateRideForm = (props) => {
   return (
     <div className = "form-wrapper">
+      <h2>Create Amusement Park Ride</h2>
+      <br/>
       <form onSubmit={props.createRide}>
         <div>
-          <label>Name:</label>
+          <label><b>Name:</b></label>
           <input
             className = "short-input"
             type="text"
@@ -15,7 +17,7 @@ const CreateRideForm = (props) => {
           />
         </div>
         <div>
-          <label>Description:</label>
+          <label><b>Description:</b></label>
           <input
             className = "long-input"
             type="text"
@@ -25,7 +27,7 @@ const CreateRideForm = (props) => {
           />
         </div>
         <div>
-          <label>Min Height:</label>
+          <label><b>Min Height:</b></label>
           <input
             className = "short-input"
             type="text"
@@ -35,8 +37,9 @@ const CreateRideForm = (props) => {
           />
         </div>
         <div>
-          <label>Image:</label>
+          <label><b>Image:</b></label>
           <input
+           className = "medium-input"
             type="text"
             value={props.imagePath}
             placeholder="Enter ride image path..."
