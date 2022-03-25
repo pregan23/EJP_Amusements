@@ -8,4 +8,6 @@ router.post('/rides', controllers.createRide)
 
 router.get('/rides', controllers.getAllRides)
 
+router.delete('/rides/:id', controllers.deleteRide)
+
 module.exports = router
