@@ -60,8 +60,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>EJP Amusements</h1>
-      <h3>Create Amusement Park Ride</h3>
+      <h1 className = "main-title">EJP Amusements</h1>
       <CreateRideForm
         name={name}
         description={description}
