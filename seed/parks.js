@@ -14,6 +14,7 @@ const main = async () => {
 
   await Park.insertMany(parks)
   console.log('Created an amusement park!')
+  
 }
 const run = async () => {
   await main()
