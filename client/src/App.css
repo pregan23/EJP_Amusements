@@ -12,6 +12,7 @@ body {
 
 .App {
   text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .form-wrapper {
@@ -30,6 +31,7 @@ form {
 input {
   width: 90%;
   margin: 5px;
+  font-family: inherit;
 }
 
 .button-wrapper {
@@ -45,12 +47,14 @@ button {
   cursor: pointer;
   margin: 10px;
   background-color: black;
-  color: white
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .main-title {
-  font-size: 50px;
-  margin: 10px
+  font-size: 72px;
+  margin: 10px;
+  font-family: 'Rye', cursive;
 }
 
 .rides-wrapper {
